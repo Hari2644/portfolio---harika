@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0a0a10;
+  color: #e6e6e6;
+  overflow-x: hidden;
+}
+
+/* Particle background */
+canvas#particle-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: radial-gradient(circle at 20% 20%, #111135, #050509 80%);
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  background: rgba(20, 20, 40, 0.6);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #7df9ff;
+}
+.logo span {
+  color: #6c63ff;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.8rem;
+}
+
+.nav-links a {
+  color: #e6e6e6;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: #7df9ff;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.profile-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 3px solid #7df9ff;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 25px #6c63ff;
+  transition: transform 0.4s ease;
+}
+.profile-photo:hover {
+  transform: scale(1.05);
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+.hero h1 span {
+  color: #7df9ff;
+}
+.hero p {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin-bottom: 1.5rem;
+}
+
+.resume-btn {
+  background: linear-gradient(90deg, #6c63ff, #7df9ff);
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+.resume-btn:hover {
+  box-shadow: 0 0 15px #7df9ff;
+  transform: translateY(-2px);
+}
+
+/* Sections */
+section {
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+h2 {
+  color: #7df9ff;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+/* Skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+.skills-grid div {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 1rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.skills-grid img {
+  width: 50px;
+  height: 50px;
+}
+.skills-grid div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px #6c63ff;
+}
+
+/* Projects */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px #6c63ff;
+}
+.btn-small {
+  display: inline-block;
+  margin-top: 1rem;
+  background: linear-gradient(90deg, #6c63ff, #7df9ff);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: transform 0.3s;
+}
+.btn-small:hover {
+  transform: scale(1.05);
+}
+
+/* Certifications */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+.cert-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 10px;
+  transition: box-shadow 0.3s;
+}
+.cert-card:hover {
+  box-shadow: 0 0 15px #7df9ff;
+}
+
+/* Contact */
+#contact a {
+  color: #7df9ff;
+  text-decoration: none;
+}
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #111135;
+  color: #7df9ff;
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
